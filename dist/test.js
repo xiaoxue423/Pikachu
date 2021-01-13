@@ -117,109 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"css.js":[function(require,module,exports) {
-"use strict";
+})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var string = "\n.skin * {\n    box-sizing:border-box;\n    margin: 0;\n    padding: 0;\n}\n.skin *::before,*::after{\n    box-sizing:border-box;\n}\n.skin {\n    background: #ffe600;\n    min-height: 55vh;\n    position: relative;\n}\n@media(max-width:500px){\n    .skin {\n        min-height: 60vh;\n    }\n}\n.node {\n    /* position: absolute; */\n    position: relative;\n    width: 0px;\n    height: 0px;\n    border: 20px solid black;\n    border-top-color: black;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    border-left-color: transparent;\n    left: 50%;\n    top: 150px;\n    margin-left: -20px;  \n}\n@keyframes wave {\n    0%{\n        transform: rotate(0deg);\n    }\n    33%{\n        transform: rotate(5deg);\n    }\n    66%{\n        transform: rotate(-5deg);\n    }\n    100%{\n        transform: rotate(0deg);\n    }\n}\n.node:hover {\n    /* \u5DE6\u53F3\u65B9\u5411\u4EE5\u6B63\u4E2D\u5FC3\u4E3A\u51C6   \u4E0A\u4E0B\u65B9\u5411\u4EE5\u6700\u4E0B\u9762\u4E3A\u51C6 */\n    transform-origin: 50% 100%;\n    transform-origin: center bottom;\n    animation: wave 300ms infinite linear;\n}\n.yuanhu {\n    position: absolute;\n    width: 40px;\n    height: 10px;\n    border: 1px solid black;\n    top: -30px;\n    left: -20px;\n    border-radius: 10px 10px 0 0;\n    background: black;\n}\n.eye {\n    position: absolute;\n    border: 1px soid red;\n    width: 64px;\n    height: 64px;\n    left: 50%;\n    top: 95px;\n    background: #2e2e2e;\n    margin-left: -32px;\n    border-radius: 50%;\n}\n@media(max-width:500px){\n    .eye {\n        width: 55px;\n        height: 55px;\n    }\n}\n.eye::before{\n    content: '';\n    display: block;\n    width: 32px;\n    height: 32px;\n    border: 3px solid #000;\n    background: #fff;\n    border-radius: 50%;\n    position: relative;\n    left: 8px;\n    top: 4px;\n}\n@media(max-width:500px){\n    .eye::before {\n        width: 27.5px;\n        height: 27.5px;\n    }\n}\n.eye.left {\n    transform: translateX(-130px);\n}\n@media(max-width:500px){\n    .eye.left {\n        transform: translateX(-100px);\n    }\n}\n.eye.right {\n    transform: translateX(130px);\n}\n@media(max-width:500px){\n    .eye.right {\n        transform: translateX(100px);\n    }\n}\n.mouth {\n    position: absolute;\n    /* border: 1px solid red; */\n    width: 200px;\n    height: 200px;\n    left: 50%;\n    top: 180px;\n    margin-left: -100px;\n}\n@media(max-width:500px){\n    .mouth {\n        /* border: 1px solid green; */\n        width: 100px;\n        height: 100px;\n    }\n}\n.mouth .up {\n    position: relative;\n    z-index: 100;\n    top: 20px;\n}\n.mouth .up .lip {\n    border: 4px solid black;\n    width: 150px;\n    height: 35px;\n    border-top: transparent;\n    background: #ffe600;\n}\n@media(max-width:500px){\n    .mouth .up .lip {\n        width: 100px;\n        height: 21.5px;\n    }\n}\n.mouth .up .lip.left {\n    border-radius: 0 0 0 30px;\n    border-right: transparent;\n    transform: rotate(-26deg);\n    position: absolute;\n    left: 50%;\n    margin-left: -150px;\n}\n@media(max-width:500px){\n    .mouth .up .lip.left {\n        margin-left: -45px;\n    }\n}\n.mouth .up .lip.right {\n    border-radius: 0 0 30px 0;\n    border-left: transparent;\n    transform: rotate(26deg);\n    position: absolute;\n    left: 50%;\n    margin-left: -6px;\n}\n@media(max-width:500px){\n    .mouth .up .lip.right {\n        margin-left: 50px;\n    }\n}\n.mouth .down {\n    /* border: 1px solid red; */\n    width: 250px;\n    height: 180px;\n    position: relative;\n    left: -30px;\n    top: 20px;\n    overflow: hidden;\n}\n@media(max-width:500px){\n    .mouth .down {\n        width: 150px;\n        height: 160px;\n        position: relative;\n        left: 25px;\n        top: 28px;  \n    }\n}\n.mouth .down .yuan1 {\n    border: 3px solid black;\n    width: 150px;\n    height: 800px;\n    position: absolute;\n    bottom:0;\n    left: 50%;\n    /* top: 10px; */\n    margin-left: -73px;\n    border-radius: 75px/300px;\n    background: #9b000a;\n    overflow: hidden;\n}\n.mouth .down .yuan1 .yuan2 {\n    /* border: 1px solid green; */\n    background: #ff485f;\n    width: 200px;\n    height: 300px;\n    position: absolute;\n    bottom: -160px;\n    left: 50%;\n    margin-left: -100px;\n    border-radius: 100px;\n}\n.face {\n    position: absolute;\n    border: 3px solid black;\n    width: 88px;\n    height: 88px;\n    top: 250px;\n    left:50%;\n    margin-left: -44px;\n    z-index: 3;\n    background: #ff0000;\n    border-radius: 50%;\n}\n@media(max-width:500px){\n    .face {\n        width: 66px;\n        height: 66px;\n    }\n}\n.face.left {\n    transform: translateX(-200px);\n}\n@media(max-width:500px){\n    .face.left {\n        transform: translateX(-120px);\n    }\n}\n.face.right {\n    transform: translateX(200px);\n}\n@media(max-width:500px){\n    .face.right {\n        transform: translateX(140px);\n    }\n}\n.face > img {\n    border:1px solid red;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n}\n.face.left > img {\n    transform: rotateY(180deg);\n    transform-origin: 0 0;\n}";
-var _default = string;
-exports.default = _default;
-},{}],"test.js":[function(require,module,exports) {
-"use strict";
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-var _css = _interopRequireDefault(require("./css.js"));
+  return bundleURL;
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-// 这就是一个播放器   面向对象的逻辑
-var player = {
-  // 计时器  id就是⏰号码
-  id: undefined,
-  time: 0,
-  ui: {
-    demo: document.querySelector('#demo'),
-    demo2: document.querySelector('#demo2')
-  },
-  //事件
-  events: {
-    '#btnPause': 'pause',
-    '#btnPlay': 'play',
-    '#btnSlow': 'slow',
-    '#btnNormal': 'normal',
-    '#btnFast': 'fast'
-  },
-  n: 1,
-  init: function init() {
-    //demo写文本  demo2写CSS
-    player.ui.demo.innerText = _css.default.substring(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substring(0, player.n);
-    player.bindEvents();
-    player.play();
-  },
-  //绑定事件
-  bindEvents: function bindEvents() {
-    // const hashTable = {
-    //     // 砸掉闹钟
-    //     '#btnPause': player.pause,
-    //     // 再买一个闹钟
-    //     '#btnPlay': player.play,
-    //     '#btnSlow': player.slow,
-    //     '#btnNormal': player.normal,
-    //     '#btnFast': player.fast
-    // }
-    // player.events.toString()
-    // player.events.valueOf()
-    for (var key in player.events) {
-      // 检查是不是自身属性
-      if (player.events.hasOwnProperty(key)) {
-        var value = player.events[key]; //pause play slow normal fast
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
 
-        document.querySelector(key).onclick = player[value];
-        document.querySelector(key).touchstart = player[value];
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
       }
     }
-  },
-  run: function run() {
-    player.n += 1;
 
-    if (player.n > _css.default.length) {
-      window.clearInterval(player.id);
-      return;
-    }
+    cssTimeout = null;
+  }, 50);
+}
 
-    console.log(player.n + ':' + _css.default.substring(0, player.n));
-    player.ui.demo.innerText = _css.default.substring(0, player.n);
-    player.ui.demo2.innerHTML = _css.default.substring(0, player.n); // demo.scrollTop = 999999
-
-    player.ui.demo.scrollTop = player.ui.demo.scrollHeight;
-  },
-  play: function play() {
-    player.id = setInterval(player.run, player.time);
-  },
-  pause: function pause() {
-    window.clearInterval(player.id);
-  },
-  slow: function slow() {
-    player.pause();
-    player.time = 300;
-    player.play();
-  },
-  normal: function normal() {
-    player.pause();
-    player.time = 100;
-    player.play();
-  },
-  fast: function fast() {
-    player.pause();
-    player.time = 0;
-    player.play();
-  }
-};
-player.init();
-},{"./css.js":"css.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -247,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61550" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54936" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -423,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","test.js"], null)
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/test.js.map
